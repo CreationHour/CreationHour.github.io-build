@@ -1,0 +1,32 @@
+{
+  "name": "creationhour.github.io",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Junwoo Shin <shin.junwoo97@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/CreationHour/CreationHour.github.io",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "bootstrap": "^3.3.6"
+	},
+	"overrides": {
+		"bootstrap": {
+			"main": [
+				"dist/js/bootstrap.js",
+				"dist/css/bootstrap.css",
+				"less/bootstrap.less"
+			]
+		}
+	}
+}
