@@ -145,7 +145,7 @@ gulp.task('wiredep:dist', function () {
 
 gulp.task('default', ['clean:srv', 'wiredep:srv', 'sass:srv', 'js:srv', 'images:srv', 'fonts:srv'], function() {
 	browserSync.init({
-		server: '.',
+		server: './',
 		notify: false
 	});
 
