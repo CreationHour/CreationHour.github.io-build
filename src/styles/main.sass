@@ -1,6 +1,33 @@
 @import 'flex'
 
+@font-face
+	font-family: 'Roboto'
+	src: url('assets/fonts/roboto-v15-latin-regular.eot'), url('assets/fonts/roboto-v15-latin-regular.ttf')
+
 body
 	padding: 0
 	margin: 0
 	padding-top: 70px
+
+@for $i from 1 to 6
+	h#{$i}
+		padding: 0
+		margin: 0
+		font-family: 'Roboto', sans-serif
+
+@mixin image-background($img)
+	background-image: url($img)
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	width: 100vw
+	height: 100vh
+
+#home
+	padding: 0
+	margin: 0
+
+	.above-fold
+		@include image-background('assets/images/pexels-city.jpg')
+		@extend .layout
+		@extend .horizontal
+		@extend .center-center
