@@ -23,6 +23,7 @@ const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync');
+const uglify = require('uglify-js');
 const wiredep = require('wiredep').stream;
 
 gulp.task('clean:srv', function(done) {
@@ -98,7 +99,7 @@ gulp.task('js:dist', function() {
 			esversion: 6
 		}))
 		.pipe(jshint.reporter(stylish))
-		.pipe(uglify())
+		.pipe(uglify.minify())
 		.pipe(rename({
 			suffix: '.min'
 		}))
